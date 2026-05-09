@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mental Health | SheBloom</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+  background-color: #fff6f9;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background-color: #ffe4ec;
+}
+
+.logo {
+  color: #d6336c;
+  font-weight: 600;
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.navbar nav a:hover {
+  color: #d6336c;
+}
+
+/* PAGE HERO */
+.page-hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(#ffe4ec, #fff6f9);
+}
+
+.page-hero h2 {
+  font-size: 2.3rem;
+  color: #d6336c;
+}
+
+.page-hero p {
+  margin-top: 12px;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* CONTENT SECTION */
+.content {
+  max-width: 850px;
+  margin: auto;
+  padding: 50px 30px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+  margin-top: -40px;
+}
+
+.content h3 {
+  margin-top: 30px;
+  color: #d6336c;
+  font-size: 1.3rem;
+}
+
+.content p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.content ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .page-hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .content {
+    padding: 35px 20px;
+    margin-top: -30px;
+  }
+  .affirmations {
+  background: #ffe4ec;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.affirmations button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #d6336c;
+  color: white;
+  cursor: pointer;
+}
+#affirmBtn {
+    display: inline-block !important;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+}
+</style>
+
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">SheBloom 🌷</h1>
+  <nav>
+   
+      <a href="selfcare.html">Self-Care</a>
+      <!-- <a href="mentalcare.html">Mental Health</a> -->
+      <a href="periods.html">Period Care</a>
+      <a href="physicalcare.html">physical-care</a>
+      <a href="about us .html">About</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <h2>Your mind deserves kindness 🧠</h2>
+  <p>You are not lazy. You are overwhelmed.</p>
+</section>
+
+<section class="content">
+  <h3>🌧 Overthinking & Anxiety</h3>
+  <p>
+    Overthinking is your brain trying to protect you.
+    Slow breathing, journaling, and grounding can help calm the mind.
+  </p>
+
+  <h3>💌 When You Feel Emotionally Tired</h3>
+  <ul>
+    <li>Log off for a while</li>
+    <li>Drink water slowly</li>
+    <li>Do ONE small task only</li>
+    <li>Rest without guilt</li>
+  </ul>
+
+  <h3>🌱 Reminder</h3>
+  <p>
+    Healing is not linear. Some days will feel heavy — and that’s okay.
+  </p>
+</section>
+ <!-- AFFIRMATIONS -->
+  <section class="affirmations">
+    <h2>Today’s Reminder 💗</h2>
+    <p id="affirmation"> "I embrace my emotions—they are my guides, not my enemies".</p>
+    <button onclick="newAffirmation()">New Affirmation</button>
+  </section>
+<footer>
+  <p>It’s okay to feel tired; I allow myself to rest🤍</p>
+</footer>
+
+</body>
+</html>
+<script>
+  const affirmations = [
+ "I embrace my emotions—they are my guides, not my enemies",
+"It’s okay to feel tired; I allow myself to rest",
+
+"I am resilient and can handle life’s challenges with grace",
+
+"I trust my intuition to guide me in the right direction",
+
+"I release the need to be perfect; I celebrate my progress",
+  
+];
+
+function newAffirmation() {
+  const random = Math.floor(Math.random() * affirmations.length);
+  document.getElementById("affirmation").innerText = affirmations[random];
+  
+}
+</script>
